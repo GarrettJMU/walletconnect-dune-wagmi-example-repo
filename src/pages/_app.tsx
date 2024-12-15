@@ -52,6 +52,7 @@ export default function App({Component, pageProps}: AppProps) {
         <>
             {ready ? (
                 <DuneProvider duneApiKey={process.env.NEXT_PUBLIC_DUNE_API_KEY!}>
+                    {/*// @ts-ignore*/}
                     <WagmiConfig config={wagmiConfig}>
                         <Component {...pageProps} />
                     </WagmiConfig>
